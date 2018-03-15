@@ -1,10 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+datos=np.loadtxt("fecha_mancha.dat")
+year=datos[:,0]
+manchas=datos[:,1]
 
-x=np.linspace(-10,10,100)
-
-y= x**2
-
-plt.plot(x,y)
-plt.savefig("grafica")
+plt.plot(year,manchas)
+plt.savefig("fecha_mancha.pdf")
